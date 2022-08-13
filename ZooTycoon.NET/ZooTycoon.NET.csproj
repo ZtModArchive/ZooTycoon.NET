@@ -7,7 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
+    <Folder Include="DataModels\Classes\Animations\" />
+    <Folder Include="Entities\Buildings\" />
+    <Folder Include="Entities\Fences\" />
+    <Folder Include="Entities\Paths\" />
+    <Folder Include="Entities\Scenery\" />
   </ItemGroup>
 
 </Project>
