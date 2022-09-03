@@ -25,13 +25,9 @@ jobs:
             6.0.x
       - name: Restore dependencies
         run: dotnet restore
-      - name: install dotnet format
-        run: dotnet tool install dotnet-format
       - name: Build
         run: dotnet build --no-restore
       - name: Test
         run: dotnet test --no-build --verbosity normal
-      - name: Format
-        run: dotnet format --check
       - name: Publish
         run: dotnet publish
