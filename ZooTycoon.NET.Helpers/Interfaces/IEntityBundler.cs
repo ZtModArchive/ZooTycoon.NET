@@ -11,6 +11,7 @@ namespace ZooTycoon.NET.Helpers.Interfaces
         public string Type { get; set; }
         public TSubType DefaultSubType { get; set; }
         public TEntity GetDefaultEntity();
+        public TEntity GetEntity(TSubType subType);
         public IEntityBundler<TSubType, TCharacteristics, TEntity> AddEntity(TEntity entity);
         public IEntityBundler<TSubType, TCharacteristics, TEntity> RemoveEntity(TSubType subType);
         public IEntityBundler<TSubType, TCharacteristics, TEntity> AutoFillBundler();

@@ -37,6 +37,10 @@ namespace ZooTycoon.NET.Helpers.Bundlers
 
             AddEntity(entity);
         }
+        public TEntity GetEntity(TSubType subType)
+        {
+            return _entities[subType];
+        }
 
         public IEntityBundler<TSubType, TCharacteristics, TEntity> AddEntity(TEntity entity)
         {
