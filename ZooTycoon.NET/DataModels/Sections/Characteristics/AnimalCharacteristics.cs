@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using ZooTycoon.NET.DataModels.Enums;
 using ZooTycoon.NET.Entities.Animals;
 
 namespace ZooTycoon.NET.DataModels.Sections.Characteristics
@@ -35,8 +36,6 @@ namespace ZooTycoon.NET.DataModels.Sections.Characteristics
         public int? UsesRealShadows { get; set; }
         public int? KeeperFoodType { get; set; }
         public int? PrefIconID { get; set; }
-        public int? LaysEggs { get; set; }
-        public int? EatsEggs { get; set; }
         public int? TimeToHatch { get; set; }
         public int? EggIconZoom { get; set; }
         public int? BoxedIconZoom { get; set; }
@@ -44,8 +43,6 @@ namespace ZooTycoon.NET.DataModels.Sections.Characteristics
         public int? HelpID { get; set; }
         public int? Family { get; set; }
         public int? Genus { get; set; }
-        public int? Habitat { get; set; }
-        public int? Location { get; set; }
         public int? PurchaseCost { get; set; }
         public int? InitialHappiness { get; set; }
         public int? SlowRate { get; set; }
@@ -56,12 +53,6 @@ namespace ZooTycoon.NET.DataModels.Sections.Characteristics
         public int? BoxFootprintX { get; set; }
         public int? BoxFootprintY { get; set; }
         public int? BoxFootprintZ { get; set; }
-        public int? HeliRecovery { get; set; }
-        public int? Walkable { get; set; }
-        public int? Tall { get; set; }
-        public int? BabiesAttack { get; set; }
-        public int? Preattack { get; set; }
-        public int? ResetPreyPosition { get; set; }
         public int? Captivity { get; set; }
         public int? NoFoodChange { get; set; }
         public int? SickChange { get; set; }
@@ -115,19 +106,12 @@ namespace ZooTycoon.NET.DataModels.Sections.Characteristics
         public int? Offspring { get; set; }
         public int? MatingType { get; set; }
         public int? NoMateChange { get; set; }
-        public int? IsJumper { get; set; }
-        public int? IsClimber { get; set; }
-        public int? IsManEater { get; set; }
         public int? BashStrength { get; set; }
-        public int? CrushesFences { get; set; }
         public int? Keeper { get; set; }
-        public int? Flies { get; set; }
-        public int? Swims { get; set; }
         public int? WaterNeeded { get; set; }
         public int? LandNeeded { get; set; }
         public int? EnterWaterChance { get; set; }
         public int? EnterLandChance { get; set; }
-        public int? Underwater { get; set; }
         public int? UnderwaterNeeded { get; set; }
         public int? EnterTankChance { get; set; }
         public int? EscapedChange { get; set; }
@@ -147,18 +131,39 @@ namespace ZooTycoon.NET.DataModels.Sections.Characteristics
         public int? DrinkWaterChance { get; set; }
         public int? ChaseAnimalChance { get; set; }
         public int? ClimbsCliffs { get; set; }
-        public int? DinoZoodoo { get; set; }
-        public int? SmallZoodoo { get; set; }
         public int? BuildingUseChance { get; set; }
         public int? Attractiveness { get; set; }
-        public int? NeedShelter { get; set; }
         public int? BreathThreshold { get; set; }
         public int? BreathIncrement { get; set; }
+
         public bool? HasShadowImages { get; set; }
         public bool? HasUnderwaterSection { get; set; }
+        public bool? LaysEggs { get; set; }
+        public bool? EatsEggs { get; set; }
+        public bool? HeliRecovery { get; set; }
+        public bool? Walkable { get; set; }
+        public bool? Tall { get; set; }
+        public bool? BabiesAttack { get; set; }
+        public bool? Preattack { get; set; }
+        public bool? ResetPreyPosition { get; set; }
+        public bool? IsJumper { get; set; }
+        public bool? IsClimber { get; set; }
+        public bool? IsManEater { get; set; }
+        public bool? CrushesFences { get; set; }
+        public bool? Flies { get; set; }
+        public bool? Swims { get; set; }
+        public bool? Underwater { get; set; }
+        public bool? DinoZoodoo { get; set; }
+        public bool? SmallZoodoo { get; set; }
+        public bool? NeedShelter { get; set; }
+
         public string? GeneralInfoTextName { get; set; }
         public string? PlaqueImageName { get; set; }
         public string? ListImageName { get; set; }
+
+        public Habitat? Habitat { get; set; }
+        public Location? Location { get; set; }
+        public Era? Era { get; set; }
         public Collection<Animal>? PreyList { get; set; }
     }
 }

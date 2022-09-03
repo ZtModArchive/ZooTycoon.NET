@@ -1,4 +1,5 @@
-﻿using ZooTycoon.NET.DataModels.Interfaces;
+﻿using ZooTycoon.NET.DataModels.Enums;
+using ZooTycoon.NET.DataModels.Interfaces;
 
 namespace ZooTycoon.NET.DataModels.Sections.Characteristics
 {
@@ -10,5 +11,6 @@ namespace ZooTycoon.NET.DataModels.Sections.Characteristics
         public int? PredatorRadius { get; set; }
         public int? NonPathCost { get; set; }
         public int? NonPathCostEmergency { get; set; }
+        public Expansion? ExpansionId { get; set; }
     }
 }

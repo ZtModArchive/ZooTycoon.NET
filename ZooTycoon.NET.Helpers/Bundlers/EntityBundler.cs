@@ -7,36 +7,75 @@ namespace ZooTycoon.NET.Helpers.Bundlers
     public class EntityBundler<TSubType, TCharacteristics, TEntity> : IEntityBundler<TSubType, TCharacteristics, TEntity>
         where TSubType : Enum
         where TCharacteristics : Characteristics, new()
-        where TEntity : Entity<TSubType, TCharacteristics>
+        where TEntity : Entity<TSubType, TCharacteristics>, new()
     {
-        private Dictionary<TSubType, TEntity> _entities = new();
+        private readonly Dictionary<TSubType, TEntity> _entities = new();
 
-        public string Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public TSubType DefaultSubType { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Type { get; set; }
+        public TSubType DefaultSubType { get; set; }
+        public EntityBundler(string type)
+        {
+            TEntity entity = new()
+            {
+                Type = type,
+                SubType = default
+            };
+
+            Type = entity.Type;
+            DefaultSubType = entity.SubType!;
+
+            AddEntity(entity);
+        }
+        public EntityBundler(TEntity entity)
+        {
+            Type = entity.Type;
+
+            if (entity.SubType != null)
+                DefaultSubType = entity.SubType;
+            else
+                DefaultSubType = default!;
+
+            AddEntity(entity);
+        }
 
         public IEntityBundler<TSubType, TCharacteristics, TEntity> AddEntity(TEntity entity)
         {
-            throw new NotImplementedException();
+            if (entity.SubType != null)
+                _entities.Add(entity.SubType, entity);
+            else
+                throw new ArgumentException("Entity SubType must not be null");
+
+            return this;
         }
 
         public IEntityBundler<TSubType, TCharacteristics, TEntity> AutoFillBundler()
         {
-            throw new NotImplementedException();
+            foreach (TSubType subType in Enum.GetValues(typeof(TSubType)))
+            {
+                if (_entities.ContainsKey(subType))
+                    continue;
+
+                _entities.Add(subType, new());
+            }
+
+            return this;
         }
 
         public IEntityBundler<TSubType, TCharacteristics, TEntity> ClearBundler()
         {
-            throw new NotImplementedException();
+            _entities.Clear();
+            return this;
         }
 
         public TEntity GetDefaultEntity()
         {
-            throw new NotImplementedException();
+            return _entities.Where(kv => kv.Key.Equals(DefaultSubType)).First().Value;
         }
 
         public IEntityBundler<TSubType, TCharacteristics, TEntity> RemoveEntity(TSubType subType)
         {
-            throw new NotImplementedException();
+            _entities.Remove(subType);
+            return this;
         }
     }
 }

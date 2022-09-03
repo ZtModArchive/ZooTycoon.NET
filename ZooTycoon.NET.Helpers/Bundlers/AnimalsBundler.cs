@@ -6,5 +6,11 @@ namespace ZooTycoon.NET.Helpers.Bundlers
 {
     public class AnimalsBundler : EntityBundler<AnimalsSubType, AnimalCharacteristics, Animal>
     {
+        public AnimalsBundler(string type) : base(type)
+        {
+        }
+        public AnimalsBundler(Animal entity) : base(entity)
+        {
+        }
     }
 }
