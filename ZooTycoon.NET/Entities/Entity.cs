@@ -1,22 +1,18 @@
-﻿using ZooTycoon.NET.DataModels.Enumeration;
+﻿using ZooTycoon.NET.DataModels.Sections.AnimPath;
+using ZooTycoon.NET.DataModels.Sections.Characteristics;
+using ZooTycoon.NET.DataModels.Sections.Icon;
 
 namespace ZooTycoon.NET.Entities
 {
-    public abstract class Entity
+    public abstract class Entity<TSubType, TCharacteristics>
+        where TSubType : Enum
+        where TCharacteristics : Characteristics, new()
     {
-        /// <summary>
-        /// Unique ID of the Entity
-        /// </summary>
         public string Type { get; set; } = string.Empty;
-
-        /// <summary>
-        /// Defines which Expansions this Entity should be filtered in
-        /// </summary>
-        public IEnumerable<Expansion> ExpansionMembers { get; set; } = Enumerable.Empty<Expansion>();
-
-        /// <summary>
-        /// The Expansion this Entity was added in
-        /// </summary>
-        public Expansion Expansion { get; set; }
+        public TSubType? SubType { get; set; }
+        public bool AvailableAtStartup { get; set; }
+        public virtual AnimPath AnimPath { get; set; } = new();
+        public virtual Icon Icon { get; set; } = new();
+        public virtual TCharacteristics Characteristics { get; set; } = new();
     }
 }

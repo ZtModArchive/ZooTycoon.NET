@@ -1,13 +1,19 @@
-﻿
+﻿using ZooTycoon.NET.DataModels.Sections.Characteristics;
+
 namespace ZooTycoon.NET.Entities
 {
-    public abstract class ZTunit : Unit
+    public abstract class ZtUnit<TSubType, TCharacteristics> : Unit<TSubType, TCharacteristics>
+        where TSubType : Enum
+        where TCharacteristics : Characteristics, new()
     {
-        public int ChaseTimeOut { get; set; } = 10;
-        public int ChaseLookAhead { get; set; } = 3;
-        public int PreyRadius { get; set; } = 5;
-        public int PredatorRadius { get; set; } = 7;
-        public int NonPathCost { get; set; } = 5;
-        public int NonPathCostEmergency { get; set; } = 1;
+        public ZtUnit() : base()
+        {
+            Characteristics.ChaseTimeOut = 10;
+            Characteristics.ChaseLookAhead = 3;
+            Characteristics.PreyRadius = 5;
+            Characteristics.PredatorRadius = 7;
+            Characteristics.NonPathCost = 5;
+            Characteristics.NonPathCostEmergency = 1;
+        }
     }
 }

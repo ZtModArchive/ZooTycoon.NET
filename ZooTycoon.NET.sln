@@ -3,7 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooTycoon.NET", "ZooTycoon.NET\ZooTycoon.NET.csproj", "{D2EF4707-A5F7-4206-9C31-4D75BEBB92CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooTycoon.NET", "ZooTycoon.NET\ZooTycoon.NET.csproj", "{D2EF4707-A5F7-4206-9C31-4D75BEBB92CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E5A52DE0-0FE5-46DF-B3B3-7F4F1AE5A96C}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.github\workflows\github-actions.yml = .github\workflows\github-actions.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooTycoon.NET.Helpers", "ZooTycoon.NET.Helpers\ZooTycoon.NET.Helpers.csproj", "{3521EA04-F21B-4CC4-828F-7AEF015AC375}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooTycoon.NET.Mapping", "ZooTycoon.NET.Mapping\ZooTycoon.NET.Mapping.csproj", "{A283A76F-73FC-46A0-9A92-F32CCEDDE1BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooTycoon.Net.Helpers.Tests", "ZooTycoon.Net.Helpers.Tests\ZooTycoon.Net.Helpers.Tests.csproj", "{8150ADF3-9039-4C7C-8808-72E4BCEBEF9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooTycoon.NET.Mapping.Tests", "ZooTycoon.NET.Mapping.Tests\ZooTycoon.NET.Mapping.Tests.csproj", "{CDE047E5-7C37-4620-981E-906ABEE434E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +29,22 @@ Global
 		{D2EF4707-A5F7-4206-9C31-4D75BEBB92CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2EF4707-A5F7-4206-9C31-4D75BEBB92CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2EF4707-A5F7-4206-9C31-4D75BEBB92CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3521EA04-F21B-4CC4-828F-7AEF015AC375}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3521EA04-F21B-4CC4-828F-7AEF015AC375}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3521EA04-F21B-4CC4-828F-7AEF015AC375}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3521EA04-F21B-4CC4-828F-7AEF015AC375}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A283A76F-73FC-46A0-9A92-F32CCEDDE1BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A283A76F-73FC-46A0-9A92-F32CCEDDE1BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A283A76F-73FC-46A0-9A92-F32CCEDDE1BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A283A76F-73FC-46A0-9A92-F32CCEDDE1BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8150ADF3-9039-4C7C-8808-72E4BCEBEF9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8150ADF3-9039-4C7C-8808-72E4BCEBEF9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8150ADF3-9039-4C7C-8808-72E4BCEBEF9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8150ADF3-9039-4C7C-8808-72E4BCEBEF9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDE047E5-7C37-4620-981E-906ABEE434E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDE047E5-7C37-4620-981E-906ABEE434E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDE047E5-7C37-4620-981E-906ABEE434E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDE047E5-7C37-4620-981E-906ABEE434E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
