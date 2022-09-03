@@ -4,7 +4,7 @@ using ZooTycoon.NET.Helpers.Interfaces;
 
 namespace ZooTycoon.NET.Helpers.Bundlers
 {
-    public class EntityBundler<TSubType, TCharacteristics, TEntity> : IEntityBundler<TSubType, TCharacteristics, TEntity>
+    public abstract class EntityBundler<TSubType, TCharacteristics, TEntity> : IEntityBundler<TSubType, TCharacteristics, TEntity>
         where TSubType : Enum
         where TCharacteristics : Characteristics, new()
         where TEntity : Entity<TSubType, TCharacteristics>, new()
