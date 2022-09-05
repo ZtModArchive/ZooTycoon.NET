@@ -165,5 +165,8 @@ namespace ZooTycoon.NET.DataModels.Sections.Characteristics
         public Location? Location { get; set; }
         public Era? Era { get; set; }
         public Collection<Animal>? PreyList { get; set; }
+        public Dictionary<int, int>? CompatibleAnimals { get; set; }
+        public Dictionary<int, int>? SuitableObjects { get; set; }
+        public Dictionary<Terrain, int>? CompatibleTerrain { get; set; }
     }
 }

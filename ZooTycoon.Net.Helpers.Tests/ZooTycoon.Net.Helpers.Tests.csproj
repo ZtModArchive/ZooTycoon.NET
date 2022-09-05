@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ZooTycoon.NET.CompleteCollection\ZooTycoon.NET.CompleteCollection.csproj" />
     <ProjectReference Include="..\ZooTycoon.NET.Helpers\ZooTycoon.NET.Helpers.csproj" />
     <ProjectReference Include="..\ZooTycoon.NET\ZooTycoon.NET.csproj" />
   </ItemGroup>

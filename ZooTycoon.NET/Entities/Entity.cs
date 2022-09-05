@@ -1,4 +1,5 @@
-﻿using ZooTycoon.NET.DataModels.Sections.AnimPath;
+﻿using ZooTycoon.NET.DataModels.Sections.Animations;
+using ZooTycoon.NET.DataModels.Sections.AnimPath;
 using ZooTycoon.NET.DataModels.Sections.Characteristics;
 using ZooTycoon.NET.DataModels.Sections.Icon;
 
@@ -14,5 +15,6 @@ namespace ZooTycoon.NET.Entities
         public virtual AnimPath AnimPath { get; set; } = new();
         public virtual Icon Icon { get; set; } = new();
         public virtual TCharacteristics Characteristics { get; set; } = new();
+        public virtual Animations? Animations { get; set; }
     }
 }
