@@ -53,6 +53,9 @@ namespace ZooTycoon.NET.DataModels.Sections.Characteristics
         public int? BoxFootprintX { get; set; }
         public int? BoxFootprintY { get; set; }
         public int? BoxFootprintZ { get; set; }
+        public int? EggFootprintX { get; set; }
+        public int? EggFootprintY { get; set; }
+        public int? EggFootprintZ { get; set; }
         public int? Captivity { get; set; }
         public int? NoFoodChange { get; set; }
         public int? SickChange { get; set; }
@@ -156,6 +159,7 @@ namespace ZooTycoon.NET.DataModels.Sections.Characteristics
         public bool? DinoZoodoo { get; set; }
         public bool? SmallZoodoo { get; set; }
         public bool? NeedShelter { get; set; }
+        public bool? IsSpecialAnimal { get; set; }
 
         public string? GeneralInfoTextName { get; set; }
         public string? PlaqueImageName { get; set; }

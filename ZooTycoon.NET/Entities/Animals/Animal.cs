@@ -1,4 +1,5 @@
-﻿using ZooTycoon.NET.DataModels.Sections.Characteristics;
+﻿using ZooTycoon.NET.DataModels.Sections.AmbientAnims;
+using ZooTycoon.NET.DataModels.Sections.Characteristics;
 using ZooTycoon.NET.DataModels.SubTypes;
 
 namespace ZooTycoon.NET.Entities.Animals
@@ -45,5 +46,9 @@ namespace ZooTycoon.NET.Entities.Animals
             Characteristics.RattleChance = 20;
             Characteristics.DefenseRadius = 3;
         }
+        public AmbientAnims? AmbientAnims { get; set; }
+        public AmbientAnimsWater? AmbientAnimsWater { get; set; }
+        public AmbientAnimsUnderwater? AmbientAnimsUnderwater { get; set; }
+        public AmbientAnimsSurface? AmbientAnimsSurface { get; set; }
     }
 }
