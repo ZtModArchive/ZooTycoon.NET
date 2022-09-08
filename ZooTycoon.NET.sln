@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooTycoon.NET.Helpers", "Zo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooTycoon.NET.Mapping", "ZooTycoon.NET.Mapping\ZooTycoon.NET.Mapping.csproj", "{A283A76F-73FC-46A0-9A92-F32CCEDDE1BF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooTycoon.NET.Helpers.Tests", "ZooTycoon.Net.Helpers.Tests\ZooTycoon.NET.Helpers.Tests.csproj", "{8150ADF3-9039-4C7C-8808-72E4BCEBEF9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooTycoon.NET.Helpers.Tests", "ZooTycoon.NET.Helpers.Tests\ZooTycoon.NET.Helpers.Tests.csproj", "{8150ADF3-9039-4C7C-8808-72E4BCEBEF9F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooTycoon.NET.Mapping.Tests", "ZooTycoon.NET.Mapping.Tests\ZooTycoon.NET.Mapping.Tests.csproj", "{CDE047E5-7C37-4620-981E-906ABEE434E2}"
 EndProject
