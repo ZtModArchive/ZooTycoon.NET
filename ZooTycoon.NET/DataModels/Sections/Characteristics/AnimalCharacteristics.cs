@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using ZooTycoon.NET.DataModels.Enums;
 using ZooTycoon.NET.Entities.Animals;
+using ZooTycoon.NET.Entities.Scenery;
 
 namespace ZooTycoon.NET.DataModels.Sections.Characteristics
 {
@@ -41,8 +42,6 @@ namespace ZooTycoon.NET.DataModels.Sections.Characteristics
         public int? BoxedIconZoom { get; set; }
         public int? NameID { get; set; }
         public int? HelpID { get; set; }
-        public int? Family { get; set; }
-        public int? Genus { get; set; }
         public int? PurchaseCost { get; set; }
         public int? InitialHappiness { get; set; }
         public int? SlowRate { get; set; }
@@ -165,12 +164,14 @@ namespace ZooTycoon.NET.DataModels.Sections.Characteristics
         public string? PlaqueImageName { get; set; }
         public string? ListImageName { get; set; }
 
+        public Family? Family { get; set; }
+        public Genus? Genus { get; set; }
         public Habitat? Habitat { get; set; }
         public Location? Location { get; set; }
         public Era? Era { get; set; }
-        public Collection<Animal>? PreyList { get; set; }
-        public Dictionary<int, int>? CompatibleAnimals { get; set; }
-        public Dictionary<int, int>? SuitableObjects { get; set; }
+        public IEnumerable<Animal>? PreyList { get; set; }
+        public Dictionary<Family, int>? CompatibleAnimals { get; set; }
+        public Dictionary<Scenery, int>? SuitableObjects { get; set; }
         public Dictionary<Terrain, int>? CompatibleTerrain { get; set; }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using ZooTycoon.NET.DataModels.Sections.AmbientAnims;
+using ZooTycoon.NET.DataModels.Sections.BehaviorSet;
 using ZooTycoon.NET.DataModels.Sections.Characteristics;
+using ZooTycoon.NET.DataModels.Sections.Sounds;
 using ZooTycoon.NET.DataModels.SubTypes;
 
 namespace ZooTycoon.NET.Entities.Animals
@@ -50,5 +52,7 @@ namespace ZooTycoon.NET.Entities.Animals
         public AmbientAnimsWater? AmbientAnimsWater { get; set; }
         public AmbientAnimsUnderwater? AmbientAnimsUnderwater { get; set; }
         public AmbientAnimsSurface? AmbientAnimsSurface { get; set; }
+        public Sounds? Sounds { get; set; }
+        public BehaviorSets? BehaviorSets { get; set; }
     }
 }
