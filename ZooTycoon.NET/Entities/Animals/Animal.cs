@@ -19,7 +19,7 @@ namespace ZooTycoon.NET.Entities.Animals
             SubType = subType;
         }
 
-        public Animal() : base()
+        public Animal()
         {
             Characteristics.CaptivityCheck = 20;
             Characteristics.OtherCheck = 40;

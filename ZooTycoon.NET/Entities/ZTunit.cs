@@ -6,7 +6,7 @@ namespace ZooTycoon.NET.Entities
         where TSubType : Enum
         where TCharacteristics : Characteristics, new()
     {
-        public ZtUnit() : base()
+        protected ZtUnit() : base()
         {
             Characteristics.ChaseTimeOut = 10;
             Characteristics.ChaseLookAhead = 3;

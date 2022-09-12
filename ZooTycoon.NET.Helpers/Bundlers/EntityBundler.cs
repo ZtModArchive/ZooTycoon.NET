@@ -13,7 +13,7 @@ namespace ZooTycoon.NET.Helpers.Bundlers
 
         public string Type { get; set; }
         public TSubType DefaultSubType { get; set; }
-        public EntityBundler(string type)
+        protected EntityBundler(string type)
         {
             TEntity entity = new()
             {
@@ -26,14 +26,18 @@ namespace ZooTycoon.NET.Helpers.Bundlers
 
             AddEntity(entity);
         }
-        public EntityBundler(TEntity entity)
+        protected EntityBundler(TEntity entity)
         {
             Type = entity.Type;
 
             if (entity.SubType != null)
+            {
                 DefaultSubType = entity.SubType;
+            }
             else
+            {
                 DefaultSubType = default!;
+            }
 
             AddEntity(entity);
         }
@@ -57,7 +61,9 @@ namespace ZooTycoon.NET.Helpers.Bundlers
             foreach (TSubType subType in Enum.GetValues(typeof(TSubType)))
             {
                 if (_entities.ContainsKey(subType))
+                {
                     continue;
+                }
 
                 _entities.Add(subType, new());
             }
