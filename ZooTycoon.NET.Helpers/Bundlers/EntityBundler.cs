@@ -49,9 +49,13 @@ namespace ZooTycoon.NET.Helpers.Bundlers
         public IEntityBundler<TSubType, TCharacteristics, TEntity> AddEntity(TEntity entity)
         {
             if (entity.SubType != null)
+            {
                 _entities.Add(entity.SubType, entity);
+            }
             else
+            {
                 throw new ArgumentException("Entity SubType must not be null");
+            }
 
             return this;
         }
