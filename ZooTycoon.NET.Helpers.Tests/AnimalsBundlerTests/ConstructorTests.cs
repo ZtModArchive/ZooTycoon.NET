@@ -13,7 +13,7 @@ namespace ZooTycoon.Net.Helpers.Tests.AnimalsBundlerTests
             AnimalsBundler bundler = new(typeName);
 
             Assert.Equal(bundler.Type, bundler.GetDefaultEntity().Type);
-            Assert.Equal(bundler.DefaultSubType, new AnimalsSubType());
+            Assert.Equal(new AnimalsSubType(), bundler.DefaultSubType);
             Assert.Equal(bundler.GetDefaultEntity().Type, typeName);
             Assert.Equal(bundler.GetEntity(AnimalsSubType.m), bundler.GetDefaultEntity());
         }
